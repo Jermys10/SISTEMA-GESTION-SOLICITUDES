@@ -1,0 +1,90 @@
+﻿@page
+@model SISTEMA_GESTION_SOLICITUDES.Pages.ProductosModel
+@{
+
+
+     ViewData["Title"] = "Productos";
+}
+<div class="text-center">
+    <h1 class="display-4">Seleccione un producto de la lista</h1>
+</div>
+
+
+
+
+<div style="width:300; height:400;"
+
+    onmouseover="resaltar1()"
+    onmouseout="quitar1()">
+
+    <img id="pro1"  src="data:image/jpeg;base64,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"/>
+    <p>Catalizador - Precio: $30000 <a href="Pedidos">Realizar pedido</a></p>
+</div>
+
+
+<div style="width:300; height:400;"
+    onmouseover="resaltar2()"
+    onmouseout="quitar2()">
+
+    <img id="pro2"  src="https://i.pinimg.com/550x/31/0a/c1/310ac10a688fd0801e5f7346f4e573e7.jpg"/>
+    <p>Aros de lujo - Precio: $2000 <a href="Pedidos">Realizar pedido </a> </p>
+
+</div>
+
+
+
+<div style="width:300; height:400;"
+
+     onmouseover="resaltar3()"
+    onmouseout="quitar3()">
+    <img id="pro3"  src="https://as01.epimg.net/mexico/imagenes/2020/11/27/masdeporte/1606514850_691372_1606522389_noticia_normal_recorte1.jpg"/>
+    <p>Llantas alta calidad - Precio: $2000 <a href="Pedidos">Realizar pedido </a> </p>
+
+</div>
+<div style="width:300; height:400;"
+    onmouseover="resaltar4()"
+    onmouseout="quitar4()">
+
+    <img id="pro4"  src="http://centralderepuestostr.com/nuevo-sitio/wp-content/uploads/2017/06/Amortiguadores-o-Compensadores-1045x675.jpg"/>
+    <p>Compensador - Precio: $1000 <a href="Pedidos">Realizar pedido </a> </p>
+
+</div>
+
+
+<script language="javascript">
+
+    function resaltar1() {
+        document.getElementById("pro1").style.border = "1px solid blue";
+    }
+    function quitar1() {
+        document.getElementById("pro1").style.border = "0px solid blue";
+    }    
+
+
+    function resaltar2() {
+        document.getElementById("pro2").style.border = "1px solid blue";
+    }
+    function quitar2() {
+        document.getElementById("pro2").style.border = "0px solid blue";
+    }    
+
+
+        function resaltar3() {
+        document.getElementById("pro3").style.border = "1px solid blue";
+    }
+
+    function quitar3() {
+        document.getElementById("pro3").style.border = "0px solid blue";
+    }    
+
+
+    function resaltar4() {
+        document.getElementById("pro4").style.border = "1px solid blue";
+    }
+    function quitar4() {
+        document.getElementById("pro4").style.border = "0px solid blue";
+    }    
+
+
+</script>
+
