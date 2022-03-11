@@ -5,4 +5,4 @@ Darling Padilla,
 Derek Aguilar,
 Marlon Garro,
 William Tenorio y
-Jermys Loa
+Jermys Loa.
